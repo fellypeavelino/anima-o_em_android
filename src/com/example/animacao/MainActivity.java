@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -21,6 +22,17 @@ public class MainActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		Button mudar = (Button)findViewById(R.id.mudar);
+		mudar.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				//https://www.youtube.com/watch?v=qeetNg5_bCk
+				setContentView(R.layout.desenho);
+			}
+		});
 		
 		LinearLayout div = (LinearLayout)findViewById(R.id.div);
 		div.setBackgroundColor(BIND_AUTO_CREATE);
@@ -41,6 +53,11 @@ public class MainActivity extends ActionBarActivity {
 		});
 	}
 //https://www.youtube.com/watch?v=9d4Wua-cxZs
+	
+	public void mudar(View v){
+		
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
